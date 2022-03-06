@@ -1,9 +1,33 @@
-import { RightOutlined, CreditCardOutlined } from "@ant-design/icons";
+import {
+  RightOutlined,
+  CreditCardOutlined,
+  DownOutlined,
+} from "@ant-design/icons";
 import { Row, Col, Button } from "react-bootstrap";
+import { Dropdown, Menu } from "antd";
 
 const Header = () => {
+  const menuFeature = (
+    <Menu>
+      <Menu.Item key="0">
+        <p>1st menu item</p>
+      </Menu.Item>
+      <Menu.Item key="1">
+        <p>2nd menu item</p>
+      </Menu.Item>
+    </Menu>
+  );
+  const menuResource = (
+    <Menu>
+      <Menu.Item key="0">
+        <p>first dropdown</p>
+      </Menu.Item>
+      <Menu.Item key="1">
+        <p>second dropdown</p>
+      </Menu.Item>
+    </Menu>
+  );
   return (
-    
     <header className="page_header_wrapper">
       <nav className="page_header_nav">
         <div className="d_flex page_header_nav_left">
@@ -12,11 +36,22 @@ const Header = () => {
           </span>
 
           <div>
-            <ul className='page_header_nav_itemsWrap'>
+            <ul className="page_header_nav_itemsWrap">
               <li>Customers</li>
-              <li>Features</li>
+              <Dropdown overlay={menuFeature} trigger={["click"]} arrow={true}>
+                <li>
+                  Features
+                  <DownOutlined className="link_arrow" />
+                </li>
+              </Dropdown>
               <li>Partners</li>
-              <li>Resources</li>
+
+              <Dropdown overlay={menuResource} trigger={["click"]} arrow={true}>
+                <li>
+                  Resources
+                  <DownOutlined className="link_arrow" />
+                </li>
+              </Dropdown>
             </ul>
           </div>
         </div>
@@ -62,7 +97,7 @@ const Header = () => {
 
               <span>More Payment Method</span>
               <Button id="form_invoice_btn">
-                Pay $1400 <RightOutlined id='btn_icon'/>
+                Pay $1400 <RightOutlined id="btn_icon" />
               </Button>
             </form>
 

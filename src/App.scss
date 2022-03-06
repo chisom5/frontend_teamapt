@@ -149,7 +149,7 @@
           font-size: 18px;
           font-weight: 600;
         }
-        span{
+        span {
           font-size: 13px;
           color: #b9b9b9;
         }
@@ -171,9 +171,26 @@
       position: relative;
       padding: 1rem 1.2rem;
     }
+    #card_bg_systematic_item_headerIcon {
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #434343;
+      border-radius: 50px;
+      color: #ffffff;
+    }
     .card_bg_systematic_item_header {
       display: flex;
+      align-items: center;
+    }
+    .card_bg_systematic_item_headerText {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       color: #fff;
+      width: -webkit-fill-available;
     }
     .card_bg_systematic_item_text {
       display: flex;
@@ -785,29 +802,6 @@
   height: 118px;
   margin-top: 0.35rem;
 }
-
-// repsonsive style
-@media (max-width: 1024px) {
-  .section_reusable_component .card_bg_systematic .card_bg_systematic_item {
-    width: 90%;
-  }
-  .service_container {
-    .service_left_content {
-      h2 {
-        font-size: 28px;
-      }
-    }
-  }
-
-  .section_header {
-    h3 {
-      font-size: 28px;
-    }
-    #section_header_subtitle {
-      text-align: center;
-    }
-  }
-}
 .experience_nav {
   display: flex;
   align-items: center;
@@ -833,6 +827,57 @@
     background-color: #f5fafe;
   }
 }
+// repsonsive style
+@media (max-width: 1024px) {
+  .dashboard_container .activities_section .timeline .timeline_profile_name {
+    margin-right: 8px;
+  }
+  .section_reusable_component {
+    .card_bg_systematic {
+      .card_bg_systematic_item {
+        width: 85%;
+      }
+
+      .card_bg_systematic_floating {
+        right: -75px;
+        width: 260px;
+      }
+    }
+
+    .card_bg_streamlined {
+      .card_bg_streamlined_floating {
+        width: 85%;
+      }
+    }
+  }
+  .service_container {
+    .service_left_content {
+      h2 {
+        font-size: 28px;
+      }
+    }
+  }
+
+  .section_header {
+    h3 {
+      font-size: 28px;
+    }
+    #section_header_subtitle {
+      text-align: center;
+    }
+  }
+
+  .experience_nav {
+    .experience_navItem {
+      padding: 8px 1.5rem;
+
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .header_col_invoice .invoice_container {
     width: 85%;

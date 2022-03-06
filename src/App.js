@@ -9,7 +9,7 @@ import { Switch, Button } from "antd";
 import {
   CheckCircleOutlined,
   ArrowRightOutlined,
-  LeftCircleOutlined,
+  LeftOutlined,
   CodepenCircleOutlined,
   FacebookOutlined,
   InstagramOutlined,
@@ -82,14 +82,20 @@ function App() {
           <div className="experience_nav">
             <div className="experience_navItem experience_navItem_active">
               <span>
-                <img src={require('./asset/images/liqudity.jpg')} alt="liquidity"/>
+                <img
+                  src={require("./asset/images/liqudity.jpg")}
+                  alt="liquidity"
+                />
               </span>
               <p>Secure Liquidity</p>
             </div>
 
             <div className="experience_navItem">
               <span>
-                <img src={require('./asset/images/digital_payment.jpg')} alt="liquidity"/>
+                <img
+                  src={require("./asset/images/digital_payment.jpg")}
+                  alt="liquidity"
+                />
               </span>
 
               <p>Digital Payments</p>
@@ -97,7 +103,10 @@ function App() {
 
             <div className="experience_navItem">
               <span>
-                <img src={require('./asset/images/automated.jpg')} alt="liquidity"/>
+                <img
+                  src={require("./asset/images/automated.jpg")}
+                  alt="liquidity"
+                />
               </span>
               <p>Automated Processes</p>
             </div>
@@ -187,8 +196,13 @@ function App() {
             <div className="reusable_card_bg card_bg_systematic">
               <div className="card_bg_systematic_item">
                 <div className="card_bg_systematic_item_header">
-                  <LeftCircleOutlined />
-                  <p>Checkout</p>
+                  <div id="card_bg_systematic_item_headerIcon">
+                    <LeftOutlined />
+                  </div>
+
+                  <div className="card_bg_systematic_item_headerText">
+                    <p>Checkout</p>
+                  </div>
                 </div>
 
                 <div className="card_bg_systematic_item_text">
