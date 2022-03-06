@@ -1,13 +1,26 @@
+@font-face {
+  src: url("./asset/fonts/FiraSans/FiraSans-Regular.ttf");
+  font-family: "FiraSans";
+}
+
+@import "../node_modules/antd/dist/antd.min.css";
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "FiraSans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: auto;
+  background-color: #ffffff;
+  color: #0c264b;
+}
+
+p {
+  margin: 0px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
