@@ -16,10 +16,6 @@ const BarChart = () => {
       },
     },
 
-    dataLabels: {
-      enabled: false,
-    },
-
     plotOptions: {
       bar: {
         columnWidth: "40%",
